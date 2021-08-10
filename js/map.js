@@ -32,11 +32,11 @@ var div = d3.select("body")
     		.style("opacity", 0);
 
 // Load in my states data!
-d3.csv("js/states_spotted.csv", function(data) {
+d3.csv("data/states_spotted.csv", function(data) {
 color.domain([0,1,2,3,4,5]); // setting the range of the input data
 
 // Load GeoJSON data and merge with states data
-d3.json("js/us_states.json", function(json) {
+d3.json("data/us_states.json", function(json) {
 
 // Loop through each state data value in the .csv file
 for (var i = 0; i < data.length; i++) {
