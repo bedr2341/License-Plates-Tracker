@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Controls Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body onload=setupDropdown()>
+    <div class="container mt-5">
+        <h1 class="fw-bold">Admin Controls Page</h1>
+        <div class="row mt-5">
+            <div class="col-12 col-lg-10">
+                <h2 class="fw-bold">State Sightings</h2>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="stateDropdownButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" id="dropdown-links" aria-labelledby="stateDropdownButton"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sightingCards">
+            <div class="card mt-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-lg-10">
+                            <p class="card-text">time<br>location</p>
+                        </div>
+                        <div class="col-12 col-lg-2">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-warning">Modify</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCnkXkvrflLlU6AolWEdMzMW85IjDrT9TU",
+            authDomain: "license-plate-tracker-1a7a6.firebaseapp.com",
+            projectId: "license-plate-tracker-1a7a6",
+            storageBucket: "license-plate-tracker-1a7a6.appspot.com",
+            messagingSenderId: "1001624244610",
+            appId: "1:1001624244610:web:6a8e64ac794fc9a61fff9b"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
