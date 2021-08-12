@@ -35,6 +35,11 @@ var img = div.append("img")
 			.attr("class", "license")
 			.style("opacity", 0)
 
+d3.select("body").on("click", function(d) {
+	div.style("opacity", 0);
+	img.style("opacity", 0);
+});
+
 // Load in my states data!
 d3.csv("data/states_spotted.csv", function(data) {
 color.domain([0,1,2,3,4,5]); // setting the range of the input data
@@ -74,12 +79,18 @@ svg.selectAll("path")
 	.on("mouseover", function(d) {     
 		div.transition() 
       		.duration(200)
-        	.style("opacity", .9)
+        	.style("opacity", 1)
 			.style("left", (d3.event.pageX) + "px")
 			.style("top", (d3.event.pageY - 28) + "px");
 		img.attr('src', 'images/' + d.properties.name + '.jpg')
-			.style("opacity", .9);
-	})   
+			.style("opacity", 1);
+	})
+	.on("click", function(d) {
+		var myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
+		myModal.show();
+		
+		d3.select(".modal-title").text("Edit " + d.properties.name);
+	})
 	.style("stroke", "#fff")
 	.style("stroke-width", "1")
 	.style("fill", function(d) {
