@@ -28,15 +28,21 @@
 		</div>
 	</nav>
 
+	<!-- modal box -->
 	<div class="modal fade" id="stateModal" tabindex="-1" aria-labelledby="stateModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Add State Sighting</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					...
+					<div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="stateDropdownButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" id="dropdown-links" aria-labelledby="stateDropdownButton"></ul>
+                    </div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -1,3 +1,24 @@
+const stateNames = ["Alabama", "Alaska", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "North Carolina", "North Dakota", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Virginia", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming"];
+
+const dropdownButton = document.getElementById('stateDropdownButton');
+const dropdownLinks = document.getElementById('dropdown-links');
+
+// create the dropdown items
+stateNames.forEach((state) => {
+	const li = document.createElement('li');
+	const a = document.createElement('a');
+	a.classList.add('dropdown-item');
+	a.innerText = state;
+
+	// add onclick to dropdown items
+	a.addEventListener('click', () => {
+		dropdownButton.innerText = state;
+	});
+
+	li.appendChild(a);
+	dropdownLinks.appendChild(li);
+});
+
 //--------Modification of  michellechandra's code (https://gist.github.com/michellechandra/0b2ce4923dc9b5809922#file-cities-lived-csv)
 var width = 960;
 var height = 500;
@@ -57,6 +78,7 @@ d3.csv("data/states_spotted.csv", function(data) {
 			.enter()
 			.append("path")
 			.attr("d", path)
+			//license plate appears when hovering over state
 			.on("mouseover", function(d) {     
 				div.transition() 
 					.duration(200)
@@ -66,11 +88,12 @@ d3.csv("data/states_spotted.csv", function(data) {
 				img.attr('src', 'images/' + d.properties.name + '.jpg')
 					.style("opacity", 1);
 			})
+			//opens the modal box on click
 			.on("click", function(d) {
 				var myModal = new bootstrap.Modal(document.getElementById('stateModal'))
 				myModal.show();
 				
-				d3.select(".modal-title").text("Edit " + d.properties.name);
+				dropdownButton.innerText = d.properties.name;
 			})
 			.style("stroke", "#fff")
 			.style("stroke-width", "1")
