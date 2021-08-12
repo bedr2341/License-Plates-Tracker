@@ -1,0 +1,17 @@
+body {
+    font: 11px sans-serif;
+}
+
+path:hover {
+    fill-opacity: .7;
+}
+
+.license {
+    width: 100px;
+}
+
+.legend {
+    position: absolute;
+    left: 800px;
+    top: 350px;
+}
