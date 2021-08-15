@@ -21,7 +21,11 @@ var div = d3.select("body")
     		.attr("class", "tooltip")               
     		.style("opacity", 0);
 
-var img = div.append("img")
+var link = div.append("a")
+			.attr("href", "https://azdot.gov/motor-vehicles/vehicle-services/plates-and-placards/plate-selections-gallery")
+			.attr("target", "blank");
+
+var img = link.append("img")
 			.attr("class", "license")
 			.style("opacity", 0)
 
@@ -34,23 +38,31 @@ d3.select("body").on("click", function(d) {
 // Load in my states data!
 d3.csv("data/states_spotted.csv", function(data) {
 	color.domain([0,1,2,3,4,5]); // setting the range of the input data
+	var totalStatesSpotted = 0;
 
 	d3.json("data/us_states.json", function(json) {
 		// Loop through each state data value in the .csv file
 		for (var i = 0; i < data.length; i++) {
 			var dataState = data[i].state;
-			var dataValue = data[i].visited;
+			var dataValue = data[i].frequency;
+			var dataLink = data[i].licensesLink;
+
+			if(dataState != "Arizona") {
+				totalStatesSpotted += Number(dataValue);
+			}
 
 			for (var j = 0; j < json.features.length; j++)  {
 				var jsonState = json.features[j].properties.name;
 
 				if (dataState == jsonState) {
-					json.features[j].properties.visited = dataValue; 
+					json.features[j].properties.frequency = dataValue;
+					json.features[j].properties.licensesLink = dataLink;
 					break;
 				}
 			}
 		}
 			
+		console.log(totalStatesSpotted);
 		// Bind the data to the SVG and create one path per GeoJSON feature
 		svg.selectAll("path")
 			.data(json.features)
@@ -63,8 +75,9 @@ d3.csv("data/states_spotted.csv", function(data) {
 					.style("opacity", 1)
 					.style("left", (d3.event.pageX) + "px")
 					.style("top", (d3.event.pageY - 28) + "px");
+				link.attr("href", d.properties.licensesLink);
 				img.attr('src', 'images/' + d.properties.name + '.jpg')
-					.style("opacity", 1);
+					.style("opacity", 1)
 			})
 			.on("click", function(d) {
 				var myModal = new bootstrap.Modal(document.getElementById('stateModal'))
@@ -76,14 +89,14 @@ d3.csv("data/states_spotted.csv", function(data) {
 			.style("stroke-width", "1")
 			.style("fill", function(d) {
 
-			var value = d.properties.visited;
+			var value = d.properties.frequency;
 			if (value) {
 				return color(value);
 			} else {
 				return color(0);
 			}
 		});  
-			
+
 		var legend = d3.select("body").append("svg")
 						.attr("class", "legend")
 						.attr("width", 140)
