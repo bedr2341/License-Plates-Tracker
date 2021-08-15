@@ -92,10 +92,15 @@ d3.csv("data/states_spotted.csv", function(data) {
 			.style("stroke", "#fff")
 			.style("stroke-width", "1")
 			.style("fill", function(d) {
-				
+
 				var value = d.properties.frequency;
 				if (value) {
-					return color(value);
+					if(d.properties.name === "Arizona") {
+						return color(5); //Arizona gets the highest tier in the legend, but I don't want to count it in the frequency
+					} else {
+						FrequencyRatio(value, totalStatesSpotted);
+						return color(value);
+					}
 				} else {
 					return color(0);
 				}
@@ -124,3 +129,9 @@ d3.csv("data/states_spotted.csv", function(data) {
 			.text(function(d) { return d; });
 	});
 });
+
+//this function returns the appropriate color index based on the frequency ratio 
+function FrequencyRatio(frequency, total) {
+	var ratio = frequency / total;
+	console.log(ratio);
+}
