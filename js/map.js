@@ -40,11 +40,13 @@ d3.csv("data/states_spotted.csv", function(data) {
 	color.domain([0,1,2,3,4,5]); // setting the range of the input data
 	var totalStatesSpotted = 0;
 
-	d3.json("data/us_states.json", function(json) {
+	d3.json("data/us_states.json", async function(json) {
+		var states = await getStates();
+		
 		// Loop through each state data value in the .csv file
 		for (var i = 0; i < data.length; i++) {
 			var dataState = data[i].state;
-			var dataValue = data[i].frequency;
+			var dataValue = states[i].sightingCounter;
 			var dataLink = data[i].licensesLink;
 
 			if(dataState != "Arizona") {
@@ -57,7 +59,6 @@ d3.csv("data/states_spotted.csv", function(data) {
 				if (dataState == jsonState) {
 					json.features[j].properties.frequency = dataValue;
 					json.features[j].properties.licensesLink = dataLink;
-					break;
 				}
 			}
 		}
@@ -91,14 +92,14 @@ d3.csv("data/states_spotted.csv", function(data) {
 			.style("stroke", "#fff")
 			.style("stroke-width", "1")
 			.style("fill", function(d) {
-
-			var value = d.properties.frequency;
-			if (value) {
-				return color(value);
-			} else {
-				return color(0);
-			}
-		});  
+				
+				var value = d.properties.frequency;
+				if (value) {
+					return color(value);
+				} else {
+					return color(0);
+				}
+			});  
 
 		var legend = d3.select("body").append("svg")
 						.attr("class", "legend")

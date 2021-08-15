@@ -29,18 +29,19 @@ stateNames.forEach((state) => {
     dropdownLinks.appendChild(li);
 });
 
-function addSighting() {
+async function addSighting() {
     // get values
     const location = locationInput.value;
     const date = dateInput.value;
     const time = timeInput.value;
 
-    addPlateSighting(selectedState, date, time, location);
+    await addPlateSighting(selectedState, date, time, location);
 
     // reset form
     locationInput.value = "";
     dateInput.value = "";
     timeInput.value = "";
 
-    alert('Submitted the sighting!');
+    window.location.reload();
+    return false;
 }

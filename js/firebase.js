@@ -3,9 +3,9 @@ const auth = firebase.auth();
 
 const statesRef = db.collection("states");
 
-function addPlateSighting(stateName, date, time, location) {
+async function addPlateSighting(stateName, date, time, location) {
     // Update the sighting counter
-    statesRef.doc(stateName).get().then((doc) => {
+    await statesRef.doc(stateName).get().then((doc) => {
         if (doc.exists) {
             counter = doc.data().sightingCounter;
             statesRef.doc(stateName).update({
@@ -19,7 +19,7 @@ function addPlateSighting(stateName, date, time, location) {
     });
 
     // Add sighting to the state's sighting collection
-    statesRef.doc(stateName).collection("sightings").add({
+    await statesRef.doc(stateName).collection("sightings").add({
         date: date,
         time: time,
         location: location,
@@ -28,6 +28,11 @@ function addPlateSighting(stateName, date, time, location) {
     }).catch((error) => {
         return false;
     });
+}
+
+async function getStates() {
+    const snapshot = await firebase.firestore().collection('states').get()
+    return snapshot.docs.map(doc => doc.data());
 }
 
 function getStateData(stateName, htmlElement) {
@@ -50,13 +55,13 @@ function deleteData(stateName, sightingId) {
     statesRef.doc(stateName).get().then((doc) => {
         counter = doc.data().sightingCounter;
         statesRef.doc(stateName).update({
-            sightingCounter: counter + 1
+            sightingCounter: counter - 1
         });
     });
 
     // delete the sighting document
     statesRef.doc(stateName).collection("sightings").doc(sightingId).delete();
-
+    
     // refresh the list
     populateSightingCards(stateName);
 }

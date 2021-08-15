@@ -1,51 +1,51 @@
-state,frequency,licensesLink
-Alabama,0,http://www.worldlicenseplates.com/usa/US_ALXX.html
-Alaska,1,http://www.worldlicenseplates.com/usa/US_AKXX.html
-Arkansas,1,http://www.worldlicenseplates.com/usa/US_ARXX.html
-Arizona,5,http://www.worldlicenseplates.com/usa/US_AZXX.html
-California,1,http://www.worldlicenseplates.com/usa/US_CAXX.html
-Colorado,1,http://www.worldlicenseplates.com/usa/US_COXX.html
-Connecticut,1,http://www.worldlicenseplates.com/usa/US_CTXX.html
-Delaware,1,http://www.worldlicenseplates.com/usa/US_DEXX.html
-Florida,1,http://www.worldlicenseplates.com/usa/US_FLXX.html
-Georgia,1,http://www.worldlicenseplates.com/usa/US_GAXX.html
-Hawaii,1,http://www.worldlicenseplates.com/usa/US_HIXX.html
-Iowa,1,http://www.worldlicenseplates.com/usa/US_IAXX.html
-Idaho,1,http://www.worldlicenseplates.com/usa/US_IDXX.html
-Illinois,1,http://www.worldlicenseplates.com/usa/US_ILXX.html
-Indiana,1,http://www.worldlicenseplates.com/usa/US_INXX.html
-Kansas,1,http://www.worldlicenseplates.com/usa/US_KSXX.html
-Kentucky,1,http://www.worldlicenseplates.com/usa/US_KYXX.html
-Louisiana,1,http://www.worldlicenseplates.com/usa/US_LAXX.html
-Maine,1,http://www.worldlicenseplates.com/usa/US_MEXX.html
-Maryland,1,http://www.worldlicenseplates.com/usa/US_MDXX.html
-Massachusetts,1,http://www.worldlicenseplates.com/usa/US_MAXX.html
-Michigan,1,http://www.worldlicenseplates.com/usa/US_MIXX.html
-Minnesota,1,http://www.worldlicenseplates.com/usa/US_MNXX.html
-Missouri,1,http://www.worldlicenseplates.com/usa/US_MOXX.html
-Mississippi,0,http://www.worldlicenseplates.com/usa/US_MSXX.html
-Montana,1,http://www.worldlicenseplates.com/usa/US_MTXX.html
-North Carolina,1,http://www.worldlicenseplates.com/usa/US_NCXX.html
-North Dakota,1,http://www.worldlicenseplates.com/usa/US_NDXX.html
-Nebraska,1,http://www.worldlicenseplates.com/usa/US_NEXX.html
-New Hampshire,1,http://www.worldlicenseplates.com/usa/US_NHXX.html
-New Jersey,1,http://www.worldlicenseplates.com/usa/US_NJXX.html
-New Mexico,1,http://www.worldlicenseplates.com/usa/US_NMXX.html
-Nevada,1,http://www.worldlicenseplates.com/usa/US_NVXX.html
-New York,1,http://www.worldlicenseplates.com/usa/US_NYXX.html
-Ohio,1,http://www.worldlicenseplates.com/usa/US_OHXX.html
-Oklahoma,1,http://www.worldlicenseplates.com/usa/US_OKXX.html
-Oregon,1,http://www.worldlicenseplates.com/usa/US_ORXX.html
-Pennsylvania,1,http://www.worldlicenseplates.com/usa/US_PAXX.html
-Rhode Island,0,http://www.worldlicenseplates.com/usa/US_RIXX.html
-South Carolina,0,http://www.worldlicenseplates.com/usa/US_SCXX.html
-South Dakota,0,http://www.worldlicenseplates.com/usa/US_SDXX.html
-Tennessee,1,http://www.worldlicenseplates.com/usa/US_TNXX.html
-Texas,1,http://www.worldlicenseplates.com/usa/US_TXXX.html
-Utah,1,http://www.worldlicenseplates.com/usa/US_UTXX.html
-Virginia,1,http://www.worldlicenseplates.com/usa/US_VAXX.html
-Vermont,1,http://www.worldlicenseplates.com/usa/US_VTXX.html
-Washington,1,http://www.worldlicenseplates.com/usa/US_WAXX.html
-Wisconsin,1,http://www.worldlicenseplates.com/usa/US_WIXX.html
-West Virginia,1,http://www.worldlicenseplates.com/usa/US_WVXX.html
-Wyoming,1,http://www.worldlicenseplates.com/usa/US_WYXX.html
+state,licensesLink
+Alabama,http://www.worldlicenseplates.com/usa/US_ALXX.html
+Alaska,http://www.worldlicenseplates.com/usa/US_AKXX.html
+Arizona,http://www.worldlicenseplates.com/usa/US_AZXX.html
+Arkansas,http://www.worldlicenseplates.com/usa/US_ARXX.html
+California,http://www.worldlicenseplates.com/usa/US_CAXX.html
+Colorado,http://www.worldlicenseplates.com/usa/US_COXX.html
+Connecticut,http://www.worldlicenseplates.com/usa/US_CTXX.html
+Delaware,http://www.worldlicenseplates.com/usa/US_DEXX.html
+Florida,http://www.worldlicenseplates.com/usa/US_FLXX.html
+Georgia,http://www.worldlicenseplates.com/usa/US_GAXX.html
+Hawaii,http://www.worldlicenseplates.com/usa/US_HIXX.html
+Idaho,http://www.worldlicenseplates.com/usa/US_IDXX.html
+Illinois,http://www.worldlicenseplates.com/usa/US_ILXX.html
+Indiana,http://www.worldlicenseplates.com/usa/US_INXX.html
+Iowa,http://www.worldlicenseplates.com/usa/US_IAXX.html
+Kansas,http://www.worldlicenseplates.com/usa/US_KSXX.html
+Kentucky,http://www.worldlicenseplates.com/usa/US_KYXX.html
+Louisiana,http://www.worldlicenseplates.com/usa/US_LAXX.html
+Maine,http://www.worldlicenseplates.com/usa/US_MEXX.html
+Maryland,http://www.worldlicenseplates.com/usa/US_MDXX.html
+Massachusetts,http://www.worldlicenseplates.com/usa/US_MAXX.html
+Michigan,http://www.worldlicenseplates.com/usa/US_MIXX.html
+Minnesota,http://www.worldlicenseplates.com/usa/US_MNXX.html
+Mississippi,http://www.worldlicenseplates.com/usa/US_MSXX.html
+Missouri,http://www.worldlicenseplates.com/usa/US_MOXX.html
+Montana,http://www.worldlicenseplates.com/usa/US_MTXX.html
+Nebraska,http://www.worldlicenseplates.com/usa/US_NEXX.html
+Nevada,http://www.worldlicenseplates.com/usa/US_NVXX.html
+New Hampshire,http://www.worldlicenseplates.com/usa/US_NHXX.html
+New Jersey,http://www.worldlicenseplates.com/usa/US_NJXX.html
+New Mexico,http://www.worldlicenseplates.com/usa/US_NMXX.html
+New York,http://www.worldlicenseplates.com/usa/US_NYXX.html
+North Carolina,http://www.worldlicenseplates.com/usa/US_NCXX.html
+North Dakota,http://www.worldlicenseplates.com/usa/US_NDXX.html
+Ohio,http://www.worldlicenseplates.com/usa/US_OHXX.html
+Oklahoma,http://www.worldlicenseplates.com/usa/US_OKXX.html
+Oregon,http://www.worldlicenseplates.com/usa/US_ORXX.html
+Pennsylvania,http://www.worldlicenseplates.com/usa/US_PAXX.html
+Rhode Island,http://www.worldlicenseplates.com/usa/US_RIXX.html
+South Carolina,http://www.worldlicenseplates.com/usa/US_SCXX.html
+South Dakota,http://www.worldlicenseplates.com/usa/US_SDXX.html
+Tennessee,http://www.worldlicenseplates.com/usa/US_TNXX.html
+Texas,http://www.worldlicenseplates.com/usa/US_TXXX.html
+Utah,http://www.worldlicenseplates.com/usa/US_UTXX.html
+Vermont,http://www.worldlicenseplates.com/usa/US_VTXX.html
+Virginia,http://www.worldlicenseplates.com/usa/US_VAXX.html
+Washington,http://www.worldlicenseplates.com/usa/US_WAXX.html
+West Virginia,http://www.worldlicenseplates.com/usa/US_WVXX.html
+Wisconsin,http://www.worldlicenseplates.com/usa/US_WIXX.html
+Wyoming,http://www.worldlicenseplates.com/usa/US_WYXX.html
