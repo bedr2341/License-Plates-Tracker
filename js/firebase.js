@@ -3,19 +3,30 @@ const auth = firebase.auth();
 
 const statesRef = db.collection("states");
 
-function addPlateSighting(stateName, dateTime, location) {
+function addPlateSighting(stateName, date, time, location) {
     // Update the sighting counter
     statesRef.doc(stateName).get().then((doc) => {
-        counter = doc.data().sightingCounter;
-        statesRef.doc(stateName).update({
-            sightingCounter: counter + 1
-        });
+        if (doc.exists) {
+            counter = doc.data().sightingCounter;
+            statesRef.doc(stateName).update({
+                sightingCounter: counter + 1
+            });
+        } else {
+            statesRef.doc(stateName).set({
+                sightingCounter: 1
+            });
+        }
     });
 
     // Add sighting to the state's sighting collection
     statesRef.doc(stateName).collection("sightings").add({
-        dateTime: dateTime,
-        location: location
+        date: date,
+        time: time,
+        location: location,
+    }).then(() => {
+        return true;
+    }).catch((error) => {
+        return false;
     });
 }
 

@@ -69,6 +69,7 @@ d3.csv("data/states_spotted.csv", function(data) {
 			.enter()
 			.append("path")
 			.attr("d", path)
+			//license plate appears when hovering over state
 			.on("mouseover", function(d) {     
 				div.transition() 
 					.duration(200)
@@ -79,11 +80,13 @@ d3.csv("data/states_spotted.csv", function(data) {
 				img.attr('src', 'images/' + d.properties.name + '.jpg')
 					.style("opacity", 1)
 			})
+			//opens the modal box on click
 			.on("click", function(d) {
 				var myModal = new bootstrap.Modal(document.getElementById('stateModal'))
 				myModal.show();
 				
-				d3.select(".modal-title").text("Edit " + d.properties.name);
+				dropdownButton.innerText = d.properties.name;
+				selectedState = d.properties.name;
 			})
 			.style("stroke", "#fff")
 			.style("stroke-width", "1")
