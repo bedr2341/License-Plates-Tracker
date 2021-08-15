@@ -61,7 +61,7 @@ function createCardText(stateData) {
 
     const cardText = document.createElement('p');
     cardText.classList.add('card-text');
-    cardText.innerText = `Date and Time: ${stateData.data().dateTime}\nLocation: ${stateData.data().location}`
+    cardText.innerText = `Date: ${stateData.data().date}\nTime: ${stateData.data().time}\nLocation: ${stateData.data().location}`
 
     cardTextContainer.appendChild(cardText);
 
