@@ -1,6 +1,8 @@
 const db = firebase.firestore();
 const auth = firebase.auth();
 
+auth.signInAnonymously();
+
 const statesRef = db.collection("states");
 
 async function addPlateSighting(stateName, date, time, location) {

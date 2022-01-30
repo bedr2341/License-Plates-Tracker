@@ -25,8 +25,6 @@ function setupDropdown() {
     // default state
     dropdownButton.innerText = stateNames[0];
     populateSightingCards(stateNames[0]);
-
-    auth.signInAnonymously();
 }
 
 // initializes/refreshes the list
