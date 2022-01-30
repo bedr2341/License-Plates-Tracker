@@ -3,4 +3,4 @@ With the influx of people coming to Arizona, I noticed a large increase in the v
 
 The D3.js USA map code is an edited version from  [michellechandra's wonderful code](https://gist.github.com/michellechandra/0b2ce4923dc9b5809922#file-cities-lived-csv) for the list of states he's visited.
 
-[View The Site](https://bedr2341.github.io/License-Plates-Tracker/)
+[View The Site](https://bedrio.github.io/License-Plates-Tracker/)
